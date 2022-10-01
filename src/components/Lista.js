@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from './Lista.module.css';
-import { MdDelete } from 'react-icons/md';
+import { MdAdd, MdDelete } from 'react-icons/md';
 import { BsInfoLg } from 'react-icons/bs';
 import swal from "sweetalert";
 import Drawer from 'react-modern-drawer';
@@ -76,6 +76,9 @@ const Lista = () => {
                                     <td className={styles.delete_buttom} style={{ borderBottomRightRadius: index == dados.length - 1 ? 10 : 0 }}>
                                         <button onClick={toggleDrawer} style={{ backgroundColor: '#4F4F4F' }}>
                                             <BsInfoLg size='20' />
+                                        </button>
+                                        <button onClick={toggleDrawer} style={{ backgroundColor: 'green' }}>
+                                            <MdAdd size='20' />
                                         </button>
                                         <button onClick={() => handleExcluir(item)}>
                                             <MdDelete size='20' />

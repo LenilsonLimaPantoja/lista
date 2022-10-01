@@ -36,7 +36,13 @@ button{
     font-style: italic;
     border-radius: 5px;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.delete_buttom{
+    display: flex;
 }
 
 .container_topo {
