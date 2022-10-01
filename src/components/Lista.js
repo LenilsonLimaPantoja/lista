@@ -43,6 +43,11 @@ const Lista = () => {
     return (
         <>
             <div className={styles.container}>
+                <h4 className={styles.titulo}>Lista de Dados - API React
+                    <span className={styles.dispositivo}>
+                        {/* tipo de dispositivo aqui */}
+                    </span>
+                </h4>
                 <table>
                     <thead>
                         <tr className={styles.container_topo}>

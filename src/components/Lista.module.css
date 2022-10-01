@@ -5,9 +5,18 @@
     margin: 0 auto;
 }
 
+.titulo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+.dispositivo::after{
+    content: " Descktop";
+}
+
 table {
     width: 100%;
 }
+
 .container_corpo td,
 .container_topo th {
     transition: 2s;
@@ -15,8 +24,12 @@ table {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
 }
-
-.delete_buttom button{
+button{
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.delete_buttom button {
     background-color: #FF4500;
     padding: 10px;
     color: white;
@@ -25,11 +38,16 @@ table {
     margin: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.container_topo{
+
+.container_topo {
     background-color: #1C1C1C;
     color: #FFF;
 }
+
 @media screen and (min-width: 300px) and (max-width: 1024px) {
+    .dispositivo::after{
+        content: " Mobile";
+    }
     .id button {
         background-color: #2F4F4F;
         width: 40px;
@@ -40,11 +58,13 @@ table {
         border-radius: 20px;
         color: white;
     }
-    .delete_buttom{
+
+    .delete_buttom {
         display: flex;
         justify-content: flex-end;
         margin-top: 20px;
     }
+
     table {
         border: none;
     }
