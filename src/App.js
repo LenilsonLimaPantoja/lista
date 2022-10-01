@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Lista from './components/Lista';
+import Rotas from './components/Rotas';
 
 function App() {
   return (
     <div className="App">
-      <Lista/>
+      <Rotas/>
     </div>
   );
 }

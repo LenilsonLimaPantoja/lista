@@ -8,9 +8,13 @@
 .titulo {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-transform: uppercase;
+    color: #2F4F4F;
+    text-align: justify;
 }
-.dispositivo::after{
+
+.dispositivo::after {
     content: " Descktop";
+    color: brown;
 }
 
 table {
@@ -24,11 +28,13 @@ table {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
 }
-button{
+
+button {
     border-style: none;
     background-color: transparent;
     cursor: pointer;
 }
+
 .delete_buttom button {
     background-color: #FF4500;
     padding: 10px;
@@ -41,7 +47,8 @@ button{
     align-items: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.delete_buttom{
+
+.delete_buttom {
     display: flex;
 }
 
@@ -51,9 +58,11 @@ button{
 }
 
 @media screen and (min-width: 300px) and (max-width: 1024px) {
-    .dispositivo::after{
+    .dispositivo::after {
         content: " Mobile";
+        color: #FF4500;
     }
+
     .id button {
         background-color: #2F4F4F;
         width: 40px;
@@ -101,8 +110,11 @@ button{
         padding: 0;
     }
 }
+
 @media screen and (min-width: 1024px) and (max-width: 1650px) {
-    .container{
+    .container {
         width: 90%;
-    };
+    }
+
+    ;
 }

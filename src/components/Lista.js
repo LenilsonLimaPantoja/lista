@@ -5,11 +5,16 @@ import { BsInfoLg } from 'react-icons/bs';
 import swal from "sweetalert";
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
+import { useNavigate } from "react-router-dom";
 const Lista = () => {
     const [dados, setdados] = useState([]);
     const [isOpen, setIsOpen] = React.useState(false)
+    const redirect = useNavigate();
     const toggleDrawer = () => {
         setIsOpen((prevState) => !prevState)
+    }
+    const handleRedirect = (rota) => {
+        redirect(`/${rota}`);
     }
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
@@ -43,7 +48,7 @@ const Lista = () => {
     return (
         <>
             <div className={styles.container}>
-                <h4 className={styles.titulo}>Lista de Dados - API React
+                <h4 className={styles.titulo}>Lista de Dados API - Visualização
                     <span className={styles.dispositivo}>
                         {/* tipo de dispositivo aqui */}
                     </span>
@@ -77,7 +82,7 @@ const Lista = () => {
                                         <button onClick={toggleDrawer} style={{ backgroundColor: '#4F4F4F' }}>
                                             <BsInfoLg size='20' />
                                         </button>
-                                        <button onClick={toggleDrawer} style={{ backgroundColor: 'green' }}>
+                                        <button onClick={() => handleRedirect('cadastrar-user')} style={{ backgroundColor: 'green' }}>
                                             <MdAdd size='20' />
                                         </button>
                                         <button onClick={() => handleExcluir(item)}>
