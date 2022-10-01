@@ -48,7 +48,7 @@ const Lista = () => {
                         {/* tipo de dispositivo aqui */}
                     </span>
                 </h4>
-                <table>
+                <table cellSpacing='0'>
                     <thead>
                         <tr className={styles.container_topo}>
                             <th style={{ borderTopLeftRadius: 10 }}>ID</th>
