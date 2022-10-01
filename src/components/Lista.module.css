@@ -1,0 +1,77 @@
+.container {
+    padding: 10px;
+    width: 80%;
+    transition: 2s;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+}
+.container_corpo td,
+.container_topo th {
+    transition: 2s;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.delete_buttom button{
+    background-color: #FF4500;
+    padding: 10px;
+    color: white;
+    font-style: italic;
+    border-radius: 5px;
+    margin: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container_topo{
+    background-color: #1C1C1C;
+    color: #FFF;
+}
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+    .id button {
+        background-color: #2F4F4F;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        color: white;
+    }
+    .delete_buttom{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    table {
+        border: none;
+    }
+
+    thead {
+        display: none;
+    }
+
+    .container_topo,
+    .container_corpo {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        border: solid 1px gray;
+    }
+
+    .container_corpo td {
+        padding: 0px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+}
