@@ -9,7 +9,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-transform: uppercase;
     color: #2F4F4F;
-    text-align: justify;
+    padding: 10px;
 }
 
 .dispositivo::after {
