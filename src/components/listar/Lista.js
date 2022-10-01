@@ -60,56 +60,61 @@ const Lista = () => {
     }
     else {
         return (
-            <>
-                <div className={styles.container}>
-                    <h4 className={styles.titulo}>Lista de Dados API - Visualização
-                        <span className={styles.dispositivo}>
-                            {/* tipo de dispositivo aqui */}
-                        </span>
-                    </h4>
-                    <table cellSpacing='0'>
-                        <thead>
-                            <tr className={styles.container_topo}>
-                                <th style={{ borderTopLeftRadius: 10 }}>ID</th>
-                                <th>NAME</th>
-                                <th>EMAIL</th>
-                                <th>WEBSITE</th>
-                                <th>ZIPCODE</th>
-                                <th style={{ borderTopRightRadius: 10 }}>AÇÕES</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                dados.map((item, index) => (
-                                    <tr key={index} className={styles.container_corpo}
-                                        style={{ backgroundColor: index % 2 == 0 ? '#dbd7d7' : '#fffff' }}>
-                                        <td className={styles.id} style={{ borderBottomLeftRadius: index == dados.length - 1 ? 10 : 0 }}>
-                                            <button>
-                                                {item.id}
-                                            </button>
-                                        </td>
-                                        <td>{item.name}</td>
-                                        <td>{item.email}</td>
-                                        <td>{item.website}</td>
-                                        <td>{item.address.zipcode}</td>
-                                        <td className={styles.delete_buttom} style={{ borderBottomRightRadius: index == dados.length - 1 ? 10 : 0 }}>
-                                            <button onClick={() => handleRedirect('info-user')} style={{ backgroundColor: '#4F4F4F' }}>
-                                                <BsInfoLg size='20' />
-                                            </button>
-                                            <button onClick={() => handleRedirect('cadastrar-user')} style={{ backgroundColor: 'green' }}>
-                                                <MdAdd size='20' />
-                                            </button>
-                                            <button onClick={() => handleExcluir(item)}>
-                                                <MdDelete size='20' />
-                                            </button>
-                                        </td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </>
+            dados.length != 0 ?
+            <div className={styles.container}>
+                <h4 className={styles.titulo}>Lista de Dados API - Visualização
+                    <span className={styles.dispositivo}>
+                        {/* tipo de dispositivo aqui */}
+                    </span>
+                </h4>
+                <table cellSpacing='0'>
+                    <thead>
+                        <tr className={styles.container_topo}>
+                            <th style={{ borderTopLeftRadius: 10 }}>ID</th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>WEBSITE</th>
+                            <th>ZIPCODE</th>
+                            <th style={{ borderTopRightRadius: 10 }}>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            dados.map((item, index) => (
+                                <tr key={index} className={styles.container_corpo}
+                                    style={{ backgroundColor: index % 2 == 0 ? '#dbd7d7' : '#fffff' }}>
+                                    <td className={styles.id} style={{ borderBottomLeftRadius: index == dados.length - 1 ? 10 : 0 }}>
+                                        <button>
+                                            {item.id}
+                                        </button>
+                                    </td>
+                                    <td>{item.name}</td>
+                                    <td>{item.email}</td>
+                                    <td>{item.website}</td>
+                                    <td>{item.address.zipcode}</td>
+                                    <td className={styles.delete_buttom} style={{ borderBottomRightRadius: index == dados.length - 1 ? 10 : 0 }}>
+                                        <button onClick={() => handleRedirect('info-user')} style={{ backgroundColor: '#4F4F4F' }}>
+                                            <BsInfoLg size='20' />
+                                        </button>
+                                        <button onClick={() => handleRedirect('cadastrar-user')} style={{ backgroundColor: 'green' }}>
+                                            <MdAdd size='20' />
+                                        </button>
+                                        <button onClick={() => handleExcluir(item)}>
+                                            <MdDelete size='20' />
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
+            </div>
+            :
+            <div style={{height: '100vh', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <h4 className={styles.titulo}>
+                    nenhum usuário foi encontrado
+                </h4>
+            </div>
         )
     }
 }
